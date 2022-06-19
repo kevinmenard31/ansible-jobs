@@ -4,10 +4,10 @@
    # List of tasks to be executed
   tasks:
   - community.vmware.vmware_host_config_manager:
-     hostname: '{{ vcenter_hostname }}'
-     username: '{{ vcenter_username }}'
-     password: '{{ vcenter_password }}'
-     esxi_hostname: '{{ esxi_hostname }}'
+     hostname: '{{ vcenter.hostname }}'
+     username: '{{ vcenter.username }}'
+     password: '{{ vcenter.password }}'
+     esxi_hostname: '{{ esxi.hostname }}'
      validate_certs: no
      options:
        'Config.HostAgent.log.level': 'verbose'
