@@ -7,8 +7,8 @@
      hostname: '{{ vcenter_hostname }}'
      username: '{{ vcenter_username }}'
      password: '{{ vcenter_password }}'
+     esxi_hostname: '{{ esxi_hostname }}'
      validate_certs: no
-     esxi_hostname: 'esx-appart.private.local'
      options:
        'Config.HostAgent.log.level': 'verbose'
     delegate_to: localhost
