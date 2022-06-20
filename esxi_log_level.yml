@@ -1,14 +1,10 @@
-- hosts: localhost
-   # Become root user
-  become: yes
-   # List of tasks to be executed
-  tasks:
-   - name: Manage Log level setting for all ESXi hosts in given Cluster
-     community.vmware.vmware_host_config_manager:
-       hostname: '{{ vcenter_hostname }}'
-       username: '{{ vcenter_username }}'
-       password: '{{ vcenter_password }}'
-       cluster_name: cluster_name
-       options:
-           'Config.HostAgent.log.level': 'info'
-     delegate_to: localhost
+
+- name: Manage Log level setting for an ESXi host
+  community.vmware.vmware_host_config_manager:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    esxi_hostname: '{{ esxi_hostname }}'
+    options:
+        'Config.HostAgent.log.level': 'verbose'
+  delegate_to: localhost
