@@ -4,6 +4,8 @@
   become: yes
    # List of tasks to be executed
   gather_facts: no
+  roles:
+  - community.vmware
   tasks:
   - community.vmware.vmware_host_config_manager:
      hostname: '{{ vcenter_hostname }}'
