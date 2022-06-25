@@ -3,8 +3,6 @@
    # Become root user
   become: yes
    # List of tasks to be executed
-  collections:
-  - community.vmware.vmware_host_config_manager
   tasks:
   - community.vmware.vmware_host_config_manager:
      hostname: '{{ vcenter_hostname }}'
