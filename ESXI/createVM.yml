@@ -6,4 +6,3 @@
    - ansible.builtin.shell: ansible-galaxy collection install community.vmware
    - ansible.builtin.shell: pip3 install pyvmomi
    - ansible.builtin.shell: ansible-playbook demarrerVM.yml
-  delegate_to: localhost
