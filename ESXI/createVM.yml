@@ -1,3 +1,4 @@
+- Debug: "hostname du vcenter: {{ hostname_vcenter }}"
 - hosts: localhost
    # Become root user
   become: yes
