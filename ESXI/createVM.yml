@@ -1,0 +1,9 @@
+- hosts: localhost
+   # Become root user
+  become: yes
+   # List of tasks to be executed
+  tasks:
+  - ansible.builtin.shell: ansible-galaxy collection install community.vmware
+  - ansible.builtin.shell: pip3 install pyvmomi
+  - ansible.builtin.shell: ansible-playbook logLevel.yml
+    delegate_to: localhost
