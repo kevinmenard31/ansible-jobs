@@ -4,12 +4,12 @@
    # List of tasks to be executed
   tasks:
   - community.vmware.vmware_guest_powerstate:
-      hostname: {{hostname_vcenter}}
-      username: {{username_vcenter}}
-      password: {{password_vcenter}}
+      hostname: {hostname_vcenter}
+      username: {username_vcenter}
+      password: {password_vcenter}
       validate_certs: no
-      folder: {{emplacementVM}}
-      name: {{nomVM}}
+      folder: {emplacementVM}
+      name: {nomVM}
       state: powered-on
     delegate_to: localhost
     register: deploy
