@@ -4,13 +4,13 @@
    # List of tasks to be executed
   tasks:
   - community.vmware.vmware_guest_powerstate:
-      hostname: 'vcenter-appart.private.local'
-      username: 'administrator@vsphere.local'
+      hostname: ''
+      username: ''
       password: ''
       validate_certs: no
       folder: "/DatacenterAppart/"
-      name: "ClientWindowsAppart"
+      name: ""
       state: powered-off
-      #esxi_hostname: 'esx-appart.private.local'
+      #esxi_hostname: ''
     delegate_to: localhost
     register: deploy
