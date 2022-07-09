@@ -5,7 +5,7 @@
    # List of tasks to be executed
   gather_facts: no
   collections:
-  - community.vmware
+  - community.vmware.vmware_host_config_manager
   tasks:
   - community.vmware.vmware_host_config_manager:
      hostname: '{{ vcenter_hostname }}'
