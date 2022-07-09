@@ -6,7 +6,7 @@
   - community.vmware.vmware_guest_powerstate:
       hostname: 'vcenter-appart.private.local'
       username: 'administrator@vsphere.local'
-      password: 'Mw4-31_83CK2020'
+      password: ''
       validate_certs: no
       folder: "/DatacenterAppart/"
       name: "ClientWindowsAppart"
