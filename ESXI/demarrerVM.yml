@@ -3,8 +3,6 @@
   become: yes
    # List of tasks to be executed
   tasks:
-  - ansible.builtin.shell: ansible-galaxy collection install community.vmware
-  - ansible.builtin.shell: pip3 install pyvmomi
   - community.vmware.vmware_guest_powerstate:
       hostname: "{{hostname_vcenter}}"
       username: "{{username_vcenter}}"
