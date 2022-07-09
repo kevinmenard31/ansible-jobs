@@ -1,19 +1,16 @@
-
 - hosts: localhost
    # Become root user
   become: yes
    # List of tasks to be executed
-  gather_facts: no
-  collections:
-  - community.vmware.vmware_host_config_manager
   tasks:
-   - name: Manage Log level setting for an ESXi host
-    community.vmware.vmware_host_config_manager:
-      hostname: '{{ vcenter_hostname }}'
-      username: '{{ vcenter_username }}'
-      password: '{{ vcenter_password }}'
-      esxi_hostname: '{{ esxi_hostname }}'
+  - community.vmware.vmware_guest_powerstate:
+      hostname: 'vcenter-appart.private.local'
+      username: 'administrator@vsphere.local'
+      password: 'Mw4-31_83CK2020'
       validate_certs: no
-      options:
-          'Config.HostAgent.log.level': 'verbose'
+      folder: "/DatacenterAppart/"
+      name: "ClientWindowsAppart"
+      state: powered-off
+      #esxi_hostname: 'esx-appart.private.local'
     delegate_to: localhost
+    register: deploy
