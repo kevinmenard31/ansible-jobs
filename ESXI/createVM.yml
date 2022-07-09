@@ -5,5 +5,5 @@
   tasks:
   - ansible.builtin.shell: ansible-galaxy collection install community.vmware
   - ansible.builtin.shell: pip3 install pyvmomi
-  - ansible.builtin.shell: ansible-playbook demarrerVM.yml
+  - ansible.builtin.shell: ansible-playbook demarrerVM.yml --extra-vars "hostname_vcenter="{{hostname_vcenter}}""
     delegate_to: localhost
