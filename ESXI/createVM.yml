@@ -1,6 +1,4 @@
-- name: Lance les jobs vmware
-  debug: "hostname du vcenter: {{ hostname_vcenter }}"
-  hosts: localhost
+- hosts: localhost
    # Become root user
   become: yes
    # List of tasks to be executed
