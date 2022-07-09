@@ -5,7 +5,7 @@
   tasks:
    - name: Demmarer une vm
      debug:
-      msg: {{ hostname_vcenter }}
+      msg: "{{ hostname_vcenter }}"
    - ansible.builtin.shell: ansible-galaxy collection install community.vmware
    - ansible.builtin.shell: pip3 install pyvmomi
    - ansible.builtin.shell: ansible-playbook demarrerVM.yml
