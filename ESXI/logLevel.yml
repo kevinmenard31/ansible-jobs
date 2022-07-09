@@ -4,7 +4,7 @@
   become: yes
    # List of tasks to be executed
   gather_facts: no
-  roles:
+  collections:
   - community.vmware
   tasks:
   - community.vmware.vmware_host_config_manager:
