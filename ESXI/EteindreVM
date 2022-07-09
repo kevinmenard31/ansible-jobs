@@ -1,0 +1,15 @@
+- hosts: localhost
+   # Become root user
+  become: yes
+   # List of tasks to be executed
+  tasks:
+  - community.vmware.vmware_guest_powerstate:
+      hostname: "{{ hostname_vcenter }}"
+      username: "{{ username_vcenter }}"
+      password: "{{ password_vcenter }}"
+      validate_certs: no
+      folder: "{{ emplacementVM }}"
+      name: "{{ nomVM }}"
+      state: powered-off
+    delegate_to: localhost
+    register: deploy
