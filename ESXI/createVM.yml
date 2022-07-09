@@ -7,6 +7,6 @@
   - ansible.builtin.shell: pip3 install pyvmomi
   - ansible.builtin.debug:
     msg: 
-    - "{{ vcenter_hostname }}"
+    - "hostname du vcenter: {{ hostname_vcenter }}"
   - ansible.builtin.shell: ansible-playbook demarrerVM.yml
     delegate_to: localhost
