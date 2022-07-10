@@ -8,4 +8,4 @@
       msg: "{{ hostname_vcenter }}"
    - ansible.builtin.shell: ansible-galaxy collection install community.vmware
    - ansible.builtin.shell: pip3 install pyvmomi
-   - ansible.builtin.shell: ansible-playbook eteindreVM.yml --extra-vars "hostname_vcenter={{ hostname_vcenter }} username_vcenter={{ username_vcenter }} password_vcenter={{ password_vcenter }} emplacementVM={{ emplacementVM }} nomVM={{ nomVM }}"
+   - ansible.builtin.shell: ansible-playbook demarrerVM.yml --extra-vars "hostname_vcenter={{ hostname_vcenter }} username_vcenter={{ username_vcenter }} password_vcenter={{ password_vcenter }} emplacementVM={{ emplacementVM }} nomVM={{ nomVM }}"
