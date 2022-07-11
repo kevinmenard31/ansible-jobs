@@ -1,0 +1,18 @@
+- hosts: localhost
+   # Become root user
+  become: yes
+   # List of tasks to be executed
+  tasks:
+  - community.vmware.vmware_content_deploy_template:
+     hostname: "{{ vcenter_hostname }}"
+     username: "{{ vcenter_username }}"
+     password: "{{ vcenter_password }}"
+     template: ModeleWindowsServer
+     content_library: test_content_library
+     datastore: Machines virtuelles
+     folder: Private
+     datacenter: DatacenterAppart 
+     name: "{{ nom_vm }}"
+     resource_pool: test_rp
+     state: poweredon
+  delegate_to: localhost
